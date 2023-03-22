@@ -1,0 +1,24 @@
+header {
+   margin: 40px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
+nav,
+nav ul {
+   display: flex;
+   align-items: center;
+}
+
+li {
+   margin-left: 60px;
+}
+
+.logo-header {
+   height: 55px;
+}
+
+.active-link {
+   font-weight: bold;
+   text-decoration: underline;
+}

@@ -1,0 +1,10 @@
+.img-about {
+   object-fit: cover;
+   width: 100%;
+   height: 223px;
+   border-radius: 25px;
+}
+
+.about-container {
+   margin: 20px 80px;
+}
