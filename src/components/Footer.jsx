@@ -6,7 +6,7 @@ export default function Footer() {
             alt="logo Kasa"
             className="logo-footer"
          />
-         <p className="copyright">© 2022 Kasa.All rights reserved</p>
+         <h6 className="copyright">© 2022 Kasa.All rights reserved</h6>
       </footer>
    );
 }

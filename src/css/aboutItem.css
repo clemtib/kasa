@@ -1,3 +1,9 @@
+.about-expanded {
+   margin: 30px 0;
+   background-color: #f6f6f6;
+   border-radius: 5px;
+}
+
 .about-item {
    height: 47px;
    border-radius: 5px;

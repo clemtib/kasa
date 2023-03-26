@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-export default function AboutItem() {
+export default function AboutItem(props) {
    const [icon, setIcon] = useState(faChevronDown);
    const [isExpanded, setIsExpended] = useState(false);
 
@@ -17,12 +17,10 @@ export default function AboutItem() {
       <>
          <div className="about-expanded">
             <div className="about-item" onClick={handleClick}>
-               <h3>Title</h3>
+               <h3>{props.title}</h3>
                <FontAwesomeIcon icon={icon} size="xl" color="white" />
             </div>
-            {isExpanded && (
-               <p>Some text that appears below the div when it is clicked.</p>
-            )}
+            {isExpanded && <p>{props.description}</p>}
          </div>
       </>
    );
