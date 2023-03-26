@@ -1,9 +1,21 @@
-// import Card from "./components/card";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Card from "../components/Card";
 
-export default function Home() {
+export default function Home({ onUpdateLogements }) {
+   // const { onUpdateLogements } = props;
+   const [logements, setLogements] = useState([]);
+
+   useEffect(() => {
+      fetch("/data/logements.json")
+         .then((reponse) => reponse.json())
+         .then((data) => {
+            setLogements(data);
+            onUpdateLogements(data);
+         });
+   }, []);
+
    return (
       <>
          <div className="home">
@@ -20,9 +32,13 @@ export default function Home() {
             </figure>
          </div>
 
-         <NavLink to="/housing">
-            <Card />
-         </NavLink>
+         <div className="card-container grid-container">
+            {logements.map((logement, index) => (
+               <Link key={logement.id} to={`/housing/${logement.id}`}>
+                  <Card title={logement.title} cover={logement.cover} />
+               </Link>
+            ))}
+         </div>
       </>
    );
 }
