@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Card from "../components/Card";
 
-export default function Home({ onUpdateLogements }) {
+export default function Home() {
    // const { onUpdateLogements } = props;
    const [logements, setLogements] = useState([]);
 
@@ -12,8 +12,9 @@ export default function Home({ onUpdateLogements }) {
          .then((reponse) => reponse.json())
          .then((data) => {
             setLogements(data);
-            onUpdateLogements(data);
+            // onUpdateLogements(data);
          });
+      // }, [onUpdateLogements]);
    }, []);
 
    return (
@@ -33,8 +34,15 @@ export default function Home({ onUpdateLogements }) {
          </div>
 
          <div className="card-container grid-container">
-            {logements.map((logement, index) => (
-               <Link key={logement.id} to={`/housing/${logement.id}`}>
+            {logements.map((logement) => (
+               <Link
+                  key={logement.id}
+                  to={`/housing/${logement.id}`}
+                  state={{ logement }}
+                  //l'objet logement est transmit en temps que propriété de l'objet "state" au composant de la page destination
+                  //contient les details du logement selectioné
+                  //la page de destination peut recupérer les données grace a la methode "location" de la bibliothèque react-router-dom
+               >
                   <Card title={logement.title} cover={logement.cover} />
                </Link>
             ))}
