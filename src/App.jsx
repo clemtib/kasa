@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 import Header from "./components/Header";
 import Home from "./page/Home";
@@ -10,28 +10,30 @@ import Footer from "./components/Footer";
 import "./css/app.css";
 
 function App() {
-   const [logements, setLogements] = useState([]);
+   // const [logements, setLogements] = useState([]);
 
-   function updateLogements(logementsData) {
-      setLogements(logementsData);
-   }
+   // function updateLogements(logementsData) {
+   //    setLogements(logementsData);
+   // }
 
    return (
       <>
          <Header />
-
-         <Routes>
-            <Route
-               path="/"
-               element={<Home onUpdateLogements={updateLogements} />}
-            />
-            <Route
-               path="/housing/:id"
-               element={<Housing logements={logements} />}
-            />
-            <Route path="/about" element={<About />} />
-         </Routes>
-
+         <main>
+            <Routes>
+               <Route
+                  path="/"
+                  element={<Home />}
+                  // element={<Home onUpdateLogements={updateLogements} />}
+               />
+               <Route
+                  path="/housing/:id"
+                  // element={<Housing logements={logements} />}
+                  element={<Housing />}
+               />
+               <Route path="/about" element={<About />} />
+            </Routes>
+         </main>
          <Footer />
       </>
    );

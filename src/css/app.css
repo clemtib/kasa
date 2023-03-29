@@ -4,7 +4,24 @@
 @import "./card.css";
 @import "./header.css";
 @import "./footer.css";
-@import "./aboutItem.css";
+@import "./accordeon.css";
+@import "./housing.css";
+@import "./carousel.css";
+
+html,
+body {
+   height: 100%;
+}
+
+#root {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+main {
+   flex-grow: 1;
+}
 
 h1 {
    font-size: 48px;
@@ -21,11 +38,24 @@ h6 {
    font-weight: 500;
    color: #ffffff;
 }
+h2,
+h5 {
+   margin-top: 10px;
+   color: #ff6060;
+}
 h3 {
    font-size: 23px;
 }
-p {
+p,
+ul {
    margin: 0;
    padding: 20px 10px 10px 10px;
    color: #ff6060;
+}
+li {
+   margin: 5px 0;
+}
+
+img {
+   user-select: none;
 }

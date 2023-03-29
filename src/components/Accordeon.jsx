@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-export default function AboutItem(props) {
+export default function Accordeon(props) {
    const [icon, setIcon] = useState(faChevronDown);
    const [isExpanded, setIsExpended] = useState(false);
 
@@ -14,14 +14,12 @@ export default function AboutItem(props) {
       setIsExpended(!isExpanded);
    }
    return (
-      <>
-         <div className="about-expanded">
-            <div className="about-item" onClick={handleClick}>
-               <h3>{props.title}</h3>
-               <FontAwesomeIcon icon={icon} size="xl" color="white" />
-            </div>
-            {isExpanded && <p>{props.description}</p>}
+      <div className="about-expanded">
+         <div className="about-item" onClick={handleClick}>
+            <h3>{props.title}</h3>
+            <FontAwesomeIcon icon={icon} size="xl" color="white" />
          </div>
-      </>
+         {isExpanded && <div>{props.children}</div>}
+      </div>
    );
 }
