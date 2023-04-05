@@ -19,7 +19,9 @@ export default function Accordeon(props) {
             <h3>{props.title}</h3>
             <FontAwesomeIcon icon={icon} size="xl" color="white" />
          </div>
-         {isExpanded && <div>{props.children}</div>}
+         {isExpanded && (
+            <div className="containerExpanded">{props.children}</div>
+         )}
       </div>
    );
 }

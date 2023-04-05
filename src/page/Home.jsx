@@ -19,7 +19,7 @@ export default function Home() {
 
    return (
       <>
-         <div className="home">
+         <div className="banner">
             <figure className="container">
                <img
                   src="/images/home.webp"

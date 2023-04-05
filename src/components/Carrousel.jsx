@@ -6,7 +6,7 @@ import {
    faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-export default function Carousel({ pictures }) {
+export default function Carrousel({ pictures }) {
    const [currentIndex, setCurrentIndex] = useState(0);
 
    const handleClickLeft = () => {

@@ -1,0 +1,19 @@
+.containerNotFound {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.NotFoundTitle {
+   font-weight: 700;
+   font-size: 288px;
+}
+.NotFoundDescription {
+   margin-bottom: 100px;
+   font-weight: 500;
+   font-size: 36px;
+   text-align: center;
+}
+.NotFoundlink {
+   text-decoration: underline;
+}

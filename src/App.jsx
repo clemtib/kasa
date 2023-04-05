@@ -6,6 +6,7 @@ import Home from "./page/Home";
 import About from "./page/About";
 import Housing from "./page/Housing";
 import Footer from "./components/Footer";
+import NotFoundPage from "./page/404Page";
 
 import "./css/app.css";
 
@@ -32,6 +33,7 @@ function App() {
                   element={<Housing />}
                />
                <Route path="/about" element={<About />} />
+               <Route path="*" element={<NotFoundPage />} />
             </Routes>
          </main>
          <Footer />

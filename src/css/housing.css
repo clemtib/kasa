@@ -34,3 +34,15 @@
 .accordeon-housing-item {
    width: 45%;
 }
+
+.infoContainer {
+   margin: 20px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.profileRating {
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+}

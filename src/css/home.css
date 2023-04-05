@@ -1,4 +1,4 @@
-.home {
+.banner {
    background-color: #000;
    border-radius: 25px;
 }
@@ -34,20 +34,6 @@
    justify-content: center;
 }
 
-/* .card-container {
-   background-color: #f6f6f6;
-   border-radius: 25px;
-
-   margin-top: 40px;
-   padding: 50px;
-
-   display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-   gap: 50px;
-   justify-content: center;
-} */
-
 .card-container {
    background-color: #f6f6f6;
    border-radius: 25px;
@@ -61,4 +47,7 @@
    justify-items: center;
 
    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
 }
