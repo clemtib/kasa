@@ -1,3 +1,5 @@
+/* card grid sur trois colon */
+
 .banner {
    background-color: #000;
    border-radius: 25px;
@@ -43,11 +45,22 @@
 
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   gap: 50px;
+   gap: 20px;
    justify-items: center;
 
    align-items: center;
 }
 
 @media screen and (max-width: 850px) {
+   .img-banner,
+   .banner {
+      height: 111px;
+      border-radius: 10px;
+   }
+   .card-container {
+      background-color: #fff;
+      margin: 20px 0;
+      padding: 0;
+      grid-template-columns: repeat(1, minmax(100%, 1fr));
+   }
 }

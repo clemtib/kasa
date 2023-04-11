@@ -33,7 +33,7 @@ export default function Home() {
             </figure>
          </div>
 
-         <div className="card-container grid-container">
+         <div className="card-container">
             {logements.map((logement) => (
                <Link
                   key={logement.id}
