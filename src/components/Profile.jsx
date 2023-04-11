@@ -7,7 +7,6 @@ export default function Profile() {
    return (
       <div className="profile-container">
          <h6 className="name">
-            {" "}
             {nameWords[0]} <br />
             {nameWords[1]}
          </h6>
