@@ -10,7 +10,7 @@ export default function About() {
          />
 
          <div className="about-container">
-            <Accordeon title="Fiabilité">
+            <Accordeon title="Fiabilité" className="about-item">
                <p>
                   Les annonces postées sur Kasa garantissent une fiabilité
                   totale. Les photos sont conformes aux logements, et toutes les
@@ -18,14 +18,14 @@ export default function About() {
                </p>
             </Accordeon>
 
-            <Accordeon title="Respect">
+            <Accordeon title="Respect" className="about-item">
                <p>
                   La bienveillance fait partie des valeurs fondatrices de Kasa.
                   Tout comportement discriminatoire ou de perturbation du
                   voisinage entraînera une exclusion de notre plateforme.
                </p>
             </Accordeon>
-            <Accordeon title="Service">
+            <Accordeon title="Service" className="about-item">
                {
                   <p>
                      Nos équipes se tiennent à votre disposition pour vous
@@ -34,7 +34,7 @@ export default function About() {
                   </p>
                }
             </Accordeon>
-            <Accordeon title="Sécurité">
+            <Accordeon title="Sécurité" className="about-item">
                <p>
                   La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes
                   que pour les voyageurs, chaque logement correspond aux

@@ -14,8 +14,8 @@ export default function Accordeon(props) {
       setIsExpended(!isExpanded);
    }
    return (
-      <div className="about-expanded">
-         <div className="about-item" onClick={handleClick}>
+      <div className="accordeon-expanded">
+         <div className="accordeon-item" onClick={handleClick}>
             <h3>{props.title}</h3>
             <FontAwesomeIcon icon={icon} size="xl" color="white" />
          </div>

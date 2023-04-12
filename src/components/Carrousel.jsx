@@ -32,7 +32,11 @@ export default function Carrousel({ pictures }) {
    return (
       <div className="carousel">
          <img src={pictures[currentIndex]} alt="Deco interieur" />
-
+         <div className="counter">
+            <p>
+               {currentIndex + 1}/{pictures.length}
+            </p>
+         </div>
          <div className="arrows">
             <div className="arrow arrow-left" onClick={handleClickLeft}>
                <FontAwesomeIcon

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Card from "../components/Card";
+import Card from "../components/card";
 
 export default function Home() {
    // const { onUpdateLogements } = props;
