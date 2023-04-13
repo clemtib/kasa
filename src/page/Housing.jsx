@@ -4,7 +4,6 @@ import Accordeon from "../components/Accordeon";
 import Carrousel from "../components/Carrousel";
 import Rating from "../components/Rating";
 import Profile from "../components/Profile";
-import NotFoundPage from "./404Page";
 
 export default function Housing() {
    const { state } = useLocation();
