@@ -17,3 +17,15 @@
 .NotFoundlink {
    text-decoration: underline;
 }
+
+@media screen and (max-width: 850px) {
+   .NotFoundTitle {
+      font-size: 96px;
+   }
+   .NotFoundDescription {
+      font-size: 18px;
+   }
+   .NotFoundlink {
+      font-size: 14px;
+   }
+}

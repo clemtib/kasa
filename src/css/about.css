@@ -11,3 +11,9 @@
 .about-container accordeon-expanded {
    margin: 30px 0;
 }
+
+@media screen and (max-width: 850px) {
+   .about-container {
+      margin: 0;
+   }
+}

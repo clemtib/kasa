@@ -1,14 +1,19 @@
 // import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 import Accordeon from "../components/Accordeon";
 import Carrousel from "../components/Carrousel";
 import Rating from "../components/Rating";
 import Profile from "../components/Profile";
+import NotFoundPage from "./404Page";
 
 export default function Housing() {
    const { state } = useLocation();
 
    const logement = state && state.logement;
+
+   if (!logement) {
+      return <Navigate to="/404" />;
+   }
 
    return (
       <>

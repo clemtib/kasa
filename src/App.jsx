@@ -34,6 +34,7 @@ function App() {
                />
                <Route path="/about" element={<About />} />
                <Route path="*" element={<NotFoundPage />} />
+               <Route path="housing/*" redirectTo="*" />
             </Routes>
          </main>
          <Footer />
