@@ -8,9 +8,10 @@ import Profile from "../components/Profile";
 export default function Housing() {
    const { state } = useLocation();
 
-   const logement = state && state.logement;
+   const logement = state && state.logement; //attribue la valeur de "state.logement" à la variable "logement" uniquement si "state" et "state.logement" sont truthy
 
    if (!logement) {
+      //verifie si logement est nul ou undefine
       return <Navigate to="/404" />;
    }
 
